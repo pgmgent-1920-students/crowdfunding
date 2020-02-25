@@ -1,0 +1,27 @@
+---
+layout: single-page
+---
+<nav class="o-navbar">
+    <div class="o-navbar_bar">
+        <button class="o-navbar_toggler">Menu</button>
+    </div>
+    <div class="o-navbar_nav">
+        <ul class="o-navbar_list">
+            {%- for page in collections.content %}
+            <li class="o-navbar_listItem">
+                <a href="#{{ page.data.title | slug }}" class="m-button">{{ page.data.title | safe }}</a>
+            </li>
+            {%- endfor %}
+        </ul>
+    </div>
+</nav>
+<div class="container">
+{% for page in collections.content %}
+    <section id="{{ page.data.title | slug }}">
+        <h2>{{ page.data.title | safe }}</h2>
+        <div>
+            {{ page.templateContent | safe }}
+        </div>
+    </section>
+{% endfor %}
+</div>

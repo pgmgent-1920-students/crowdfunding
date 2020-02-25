@@ -1,0 +1,16 @@
+.o-navbar {
+  background-color: red;
+  display: flex;
+  &_bar {
+
+  }
+  &_nav {
+    
+  }
+  &_list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
